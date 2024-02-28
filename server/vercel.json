@@ -1,19 +1,13 @@
 {
   "version": 2,
+  "routes": [
+    { "src": "/gestures", "dest": "server/index.js" },
+    { "src": "/getGestures", "dest": "server/index.js" }
+  ],
   "builds": [
     {
-      "src": "server/*",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "build/*",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "build/$1"
-    }
-  ]
+      "src": "server//*.js",
+      "use": "@now/node-server"
+    }
+  ]
 }
