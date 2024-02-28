@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "routes": [
-    { "src": "/gestures", "dest": "server/index.js" },
-    { "src": "/getGestures", "dest": "server/index.js" }
-  ],
-  "builds": 
+    "builds": [
     {
       "src": "server/**/*.js",
       "use": "@now/node-server"
     }
-  
+  ],
+  "routes": [
+    { "src": "/gestures", "dest": "server/index.js" },
+    { "src": "/getGestures", "dest": "server/index.js" }
+  ]
 }
