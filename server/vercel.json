@@ -12,8 +12,12 @@
   ],
   "routes": [
     {
+      "src": "/pages/.*",
+      "dest": "server/pages/home"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "build/$1"
     }
   ]
 }
