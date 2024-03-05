@@ -11,8 +11,7 @@ app.use(express.static("public"));
 app.use(
   cors({
     origin: [
-      "http://localhost:3000",
-      
+      "https://tv-trend-upload-client.onrender.com/",
     ],
   })
 );
