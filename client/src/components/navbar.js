@@ -6,7 +6,7 @@ export default function Navbar() {
   const [iValue, setiValue] = useState(false);
   const [searchValue, setSearchValue] = useState();
   const [searchData, setSearchData] = useState([]);
-  const pageName = "http://localhost:3000"
+  const pageName = "https://tv-trend-upload-client.onrender.com/"
 
   //useEffects
   useEffect(() => {
