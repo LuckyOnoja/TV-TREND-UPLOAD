@@ -168,7 +168,17 @@ export default function Home() {
                 </div>
               </Link>
             ))}
-            <div className="singleItems">ADS</div>
+            <div className="singleItems"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2067095235090192"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style={{ display: 'block' }}
+     data-ad-format="fluid"
+     data-ad-layout-key="-6q+e9+15-2u+4y"
+     data-ad-client="ca-pub-2067095235090192"
+     data-ad-slot="7678405731"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
           </div>
           <div className="functions">
             <i onClick={handlePrevPage} class="fa-solid fa-less-than"></i>
