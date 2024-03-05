@@ -272,6 +272,20 @@ export default function Detail() {
             )}
           </div>
         </div>
+              <div> 
+              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2067095235090192"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; "
+ style={{ display: 'block', textAlign: "center" }}
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2067095235090192"
+     data-ad-slot="6238892051"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+              </div>
         <div className="icons two">MORE LIKE THIS</div>
         <div className="moreLike">
           {moreLikeVideoData.map((movieItem, index) => (
