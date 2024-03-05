@@ -276,7 +276,6 @@ export default function Detail() {
               <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2067095235090192"
      crossorigin="anonymous"></script>
 <ins class="adsbygoogle"
-     style="display:block; "
  style={{ display: 'block', textAlign: "center" }}
      data-ad-layout="in-article"
      data-ad-format="fluid"
