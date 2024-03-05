@@ -8,7 +8,14 @@ const GestureModel = require("./models/gesture");
 
 app = express();
 app.use(express.static("public"));
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000",
+      `${CLIENT_URL }`,
+    ],
+  })
+);
 app.use(express.json());
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");

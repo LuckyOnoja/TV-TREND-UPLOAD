@@ -67,7 +67,8 @@ export default function Detail() {
   const [loading, setLoading] = useState(true);
 
   //name of the page
-  const pageName = window.location.hostname;
+  const pageName = process.env.REACT_APP_SERVER_URL;
+
   useEffect(() => {
     localStorage.setItem("redValue", redValue);
   }, [redValue]);
@@ -94,9 +95,7 @@ export default function Detail() {
   useEffect(() => {
     const fetchGestures = async () => {
       try {
-        const response = await axios.get(
-          `http://${pageName}:3001/getGestures?id=${id}`
-        );
+        const response = await axios.get(`${pageName}getGestures?id=${id}`);
         if (response === null) {
           setLoading(true);
         } else {
@@ -119,7 +118,7 @@ export default function Detail() {
   const handleGestureLove = () => {
     setGestureLove((prev) => prev + 1);
     axios
-      .post(`http://${pageName}:3001/gestures?id=${id}`, {
+      .post(`${pageName}gestures?id=${id}`, {
         _id: detailData.id,
         love: gestureLove,
         like: gestureLike,
@@ -136,7 +135,7 @@ export default function Detail() {
     setGestureLike((prev) => prev + 1);
 
     axios
-      .post(`http://${pageName}:3001/gestures?id=${id}`, {
+      .post(`${pageName}gestures?id=${id}`, {
         _id: detailData.id,
         love: gestureLove,
         like: gestureLike,
@@ -151,7 +150,7 @@ export default function Detail() {
   const handleGestureDislike = () => {
     setGestureDislike((prev) => prev + 1);
     axios
-      .post(`http://${pageName}:3001/gestures?id=${id}`, {
+      .post(`${pageName}gestures?id=${id}`, {
         _id: detailData.id,
         love: gestureLove,
         like: gestureLike,
