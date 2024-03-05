@@ -11,7 +11,7 @@ app.use(express.static("public"));
 app.use(
   cors({
     origin: [
-      "https://tv-trend-upload-client.onrender.com/",
+      "https://tv-trend-upload-client.onrender.com",
     ],
   })
 );
@@ -47,7 +47,7 @@ mongoose
 
 app.post("/gestures", async (req, res) => {
   const detailid = req.query.id;
-  const present = GestureModel.find(detailid);
+    const present = await GestureModel.exists({ _id: detailid });
   if (present !== true) {
     const { _id, love, like, dislike } = req.body;
 
