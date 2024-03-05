@@ -140,7 +140,16 @@ export default function Home() {
       <Navbar />
       <div className="homeContainer">
         <div className="links">
-          <img src="https://i.imgur.com/5zQ2xbn.png" />
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2067095235090192"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-2067095235090192"
+     data-ad-slot="5965868813"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
         </div>
         <div className="movieItems">
           <div className="firstItems">{latestItems}</div>
