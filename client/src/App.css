@@ -349,6 +349,7 @@ body {
 @media (max-width: 768px) {
   .detailContainer .backgroundImg {
     height: 45vh;
+    margin-bottom: 45px;
   }
   .detailContainer .backgroundImg h1 {
     top: 60%;
@@ -359,7 +360,7 @@ body {
   .detailContainer .backgroundImg span {
     top: 75%;
     width: 100%;
-    height: 12vh;
+    height: fit-content;
     padding: 0;
     z-index: 9999999;
   }

@@ -73,7 +73,7 @@ export default function Home() {
   const [latestPageValue, setLatestPageValue] = useState(10);
 
   //name of the page
-  const pageName = window.location.hostname;
+  const pageName = process.env.REACT_APP_SERVER_URL;
 
   const handleNextPage = () => {
     setCurrentPageValue(currentPageValue + 1);

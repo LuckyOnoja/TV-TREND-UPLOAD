@@ -6,6 +6,7 @@ export default function Navbar() {
   const [iValue, setiValue] = useState(false);
   const [searchValue, setSearchValue] = useState();
   const [searchData, setSearchData] = useState([]);
+  const pageName = "http://localhost:3000"
 
   //useEffects
   useEffect(() => {
@@ -64,9 +65,9 @@ export default function Navbar() {
         </span>
       )}
       <h2 className="htwo">TV TREND</h2>
-      <div className="navLogo">
+      <a href={pageName} className="navLogo">
         <img src="https://i.imgur.com/5zQ2xbn.png"></img>
-      </div>
+      </a>
     </div>
   );
 }

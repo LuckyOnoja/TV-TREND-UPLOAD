@@ -12,17 +12,12 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",
-      `${CLIENT_URL }`,
+      
     ],
   })
 );
 app.use(express.json());
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-  res.header("Access-Control-Allow-Headers", "Content-Type");
-  next();
-});
+
 const URL = process.env.MONGO_URL;
 
 mongoose

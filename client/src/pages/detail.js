@@ -87,10 +87,8 @@ export default function Detail() {
         .then((response) => setDetailData(response.data.tvShow))
         .catch((error) => console.error("Error fetching data:", error));
     };
+
     fetchMovieDetail();
-    if (detailData.rating >= 9) {
-      setGestureLike((prev) => prev + 1000);
-    }
   }, []);
   useEffect(() => {
     const fetchGestures = async () => {
@@ -103,13 +101,19 @@ export default function Detail() {
           setGestureLike((prev) => prev + response.data.like);
           setGestureDislike((prev) => prev + response.data.dislike);
           setLoading(false);
+          if (detailData.rating >= 9) {
+            setGestureLike((prev) => prev + 500);
+          }
+          if (detailData.rating >= 9.4) {
+            setGestureLove((prev) => prev + 1000);
+          }
         }
       } catch (error) {
         console.error(error);
       }
     };
     fetchGestures();
-  }, []);
+  }, [detailData]);
   useEffect(() => {
     fetchGeneralData();
   }, [generalDataValue]);
