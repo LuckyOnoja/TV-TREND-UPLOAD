@@ -69,7 +69,7 @@ export default function Home() {
       status: "Running",
     },
   ]);
-  const [currentPageValue, setCurrentPageValue] = useState(1);
+  const [currentPageValue, setCurrentPageValue] = useState(100);
   const [latestPageValue, setLatestPageValue] = useState(10);
 
   //name of the page

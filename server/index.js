@@ -11,12 +11,21 @@ app.use(express.static("public"));
 app.use(
   cors({
     origin: [
+<<<<<<< Updated upstream
       "https://tv-trend-upload-client.onrender.com",
+=======
+      "http://localhost:3000",
+>>>>>>> Stashed changes
     ],
   })
 );
 app.use(express.json());
-
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.header("Access-Control-Allow-Headers", "Content-Type");
+  next();
+});
 const URL = process.env.MONGO_URL;
 
 mongoose
@@ -47,7 +56,12 @@ mongoose
 
 app.post("/gestures", async (req, res) => {
   const detailid = req.query.id;
+<<<<<<< Updated upstream
     const present = await GestureModel.exists({ _id: detailid });
+=======
+  const present = await GestureModel.exists({ _id: detailid });
+  
+>>>>>>> Stashed changes
   if (present !== true) {
     const { _id, love, like, dislike } = req.body;
 
