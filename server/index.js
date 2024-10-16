@@ -11,11 +11,9 @@ app.use(express.static("public"));
 app.use(
   cors({
     origin: [
-<<<<<<< Updated upstream
       "https://tv-trend-upload-client.onrender.com",
-=======
+
       "http://localhost:3000",
->>>>>>> Stashed changes
     ],
   })
 );
@@ -56,12 +54,8 @@ mongoose
 
 app.post("/gestures", async (req, res) => {
   const detailid = req.query.id;
-<<<<<<< Updated upstream
-    const present = await GestureModel.exists({ _id: detailid });
-=======
   const present = await GestureModel.exists({ _id: detailid });
-  
->>>>>>> Stashed changes
+
   if (present !== true) {
     const { _id, love, like, dislike } = req.body;
 
